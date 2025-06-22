@@ -38,7 +38,7 @@ export default function TabsLayout() {
           alignItems: "center",
         },
         tabBarStyle: {
-          backgroundColor: "#0F0D23",
+          backgroundColor: "#1e1e1e",
           borderRadius: 10,
           marginHorizontal: 20,
           marginBottom: 36,

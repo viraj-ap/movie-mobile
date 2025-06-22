@@ -10,6 +10,8 @@ import { View, Text, Image, FlatList, ActivityIndicator } from "react-native";
 
 const Search = () => {
   const [searchQuery, setsearchQuery] = useState("");
+
+  
   const {
     data: movies,
     loading,
@@ -25,12 +27,10 @@ const Search = () => {
   );
 
   useEffect(() => {
-
     const timeOutId = setTimeout(async () => {
       if (searchQuery.trim()) {
         await loadMovies();
         if (movies && movies.length > 0) {
-          // Update search count for the first movie in the results
           await updateSearchCount(searchQuery, movies[0]);
         }
       } else {
